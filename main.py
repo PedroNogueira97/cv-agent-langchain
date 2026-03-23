@@ -1,8 +1,15 @@
 import logging
 from fastapi import FastAPI
 from fastapi.middleware.cors import CORSMiddleware
-from .schemas import ChatRequest
-from .agent import run_agent
+from app.schemas import ChatRequest
+from app.agent import run_agent
+import sys
+import os
+import uvicorn
+
+# Adiciona o diretório atual ao path para que o pacote 'api' seja encontrado
+sys.path.insert(0, os.path.abspath(os.path.dirname(__file__)))
+
 
 # Configure logging
 logging.basicConfig(level=logging.INFO)
@@ -41,3 +48,6 @@ async def chat(request: ChatRequest):
         vaga=request.vaga
     )
     return {"response": response}
+
+if __name__ == "__main__":
+    uvicorn.run("main:app", host="0.0.0.0", port=8000, reload=True)
