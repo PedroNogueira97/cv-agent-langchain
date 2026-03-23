@@ -19,7 +19,7 @@ def test_chat():
         "cursos": "Curso Z",
         "formacao": "Formação W",
         "thread_id": "test-thread",
-        "vaga": "Vaga de teste"
+        "job": "Vaga de teste"
     }
     
     try:

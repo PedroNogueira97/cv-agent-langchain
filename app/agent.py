@@ -17,7 +17,7 @@ agent = create_agent(
     checkpointer=memory
 )
 
-def run_agent(message: str, nome: str, email: str, telefone: str, linkedin: str, github: str, titulo: str, resumo: str, stack: str, projetos: str, experiencia: str, idiomas: str, cursos: str, formacao: str, thread_id: str, vaga: str):
+def run_agent(message: str, nome: str, email: str, telefone: str, linkedin: str, github: str, titulo: str, resumo: str, stack: str, projetos: str, experiencia: str, idiomas: str, cursos: str, formacao: str, thread_id: str, job: str):
     # Store session data for the tools to use
     user_information = {
         "nome": nome,
@@ -36,7 +36,7 @@ def run_agent(message: str, nome: str, email: str, telefone: str, linkedin: str,
     }
     
     save_user_info(thread_id, user_information)
-    save_job_info(thread_id, vaga)
+    save_job_info(thread_id, job)
     
     config = {
         "configurable": {

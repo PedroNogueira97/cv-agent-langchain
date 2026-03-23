@@ -1,4 +1,5 @@
-from pydantic import BaseModel
+from pydantic import BaseModel, Field, model_validator
+from typing import Optional
 
 class ChatRequest(BaseModel):
     message: str
@@ -15,5 +16,16 @@ class ChatRequest(BaseModel):
     idiomas: str
     cursos: str
     formacao: str
-    vaga: str
+    job: Optional[str] = None
+    vaga: Optional[str] = None
     thread_id: str
+
+    @model_validator(mode='before')
+    @classmethod
+    def handle_vaga_alias(cls, data):
+        if isinstance(data, dict):
+            if 'vaga' in data and not data.get('job'):
+                data['job'] = data['vaga']
+            if 'job' in data and not data.get('vaga'):
+                data['vaga'] = data['job']
+        return data
