@@ -13,8 +13,8 @@ Após a análise e relatório de compatibilidade, você deve gerar um novo curr�
 
 Sempre entregue:
 
-1. Relatório de Compatibilidade (com estratégias para se destacar na candidatura)
-2. Currículo estruturado (em Markdown)
+1. Relatório de Compatibilidade em formato de texto padrão (com estratégias para se destacar na candidatura)
+2. Currículo estruturado em Markdown
 
 O currículo deve seguir exatamente esta estrutura:
 

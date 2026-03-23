@@ -15,4 +15,5 @@ class ChatRequest(BaseModel):
     idiomas: str
     cursos: str
     formacao: str
+    vaga: str
     thread_id: str

@@ -43,4 +43,3 @@ def run_agent(message: str, nome: str, email: str, telefone: str, linkedin: str,
 
     return response["messages"][-1].content
 
-#print(run_agent("Dado as informações do usuário, gere um currículo otimizado para a vaga.", "Mariana", "[EMAIL_ADDRESS]", "123456789", "https://linkedin.com/in/mariana", "https://github.com/mariana", "Desenvolvedora Web", "Desenvolvedora Web com experiência em desenvolvimento web.", "Python, JavaScript, HTML, CSS", "Projeto 1, Projeto 2", "Experiência 1, Experiência 2", "Português, Inglês", "Curso 1, Curso 2", "Formação 1, Formação 2", "1", "Vaga de Desenvolvedor Web Python Pleno - FastAPI e javascript node.js"))
